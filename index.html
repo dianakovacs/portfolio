@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+    <title>Dee's porfolio</title>
+</head>
+<body id="home">
+    <header>
+        <div id="navbar" class="navbar top">
+          <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="Letter D logo">
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#projects">projects</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="img/dianakovacs_resume.pdf" target="_blank">resume</a></li>
+            </ul>
+            <div>
+                <a id="hidden-menu" href="#projects">back</a>
+            </div>
+          </nav>
+    </header>
+
+    <section id="hero">
+        <div id="hello" >
+            <h1>
+                <span id="first-line" >Hello! I'm Dee,</span>
+                <span id="second-line" >a visual artist</span>
+                <span id="third-line">specializing in UI/UX.</span>
+            </h1>
+        </div>
+    </section>
+    <div id="arrow" class="arrow bounce">
+        <a href="#projects">
+            <img src="img/cursor-down.svg" alt="">
+        </a>
+    </div>
+            
+
+    <section id="projects">
+        <div id="project-container" class="container">
+                <div id="project01" class="project">
+                    <a class="project-link" href="meshlin.html">
+                        <img src="img/works-frame-01.svg" alt="">
+                    </a>
+                </div>
+                <div id="project02" class="project">
+                    <a class="project-link" href="acgdigital.html">
+                        <img src="img/works-frame-02.svg" alt="">
+                    </a>
+                </div>
+        </div>
+        <div class="container">
+            <div id="project03" class="project">
+                <a class="project-link" href="wireframe.html">
+                    <img src="img/works-frame-03.svg" alt="">
+                </a>
+            </div>
+            <div id="project04" class="project">
+                <a class="project-link" href="funngo.html">
+                    <img src="img/works-frame-04.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" >
+        <div class="container about">
+            <div id="about-text">
+                <h2>Diana Kovacs</h2>
+                <h3>Designer from Budapest</h3>
+                <p>When I'm not designing interaction between human and computer I like to do stuff that keeps my creativity alive: listening to strange music or long podcasts with interesting people, reading books and overthinking about everything.</p>       
+                <p>Currently I spend most of my time with my new best friend, a crazy energized dog called Mogyi. She's just perfect.</p>                      
+                <p>Anyways I'm specializing in UI/UX, interaction design and have a strong history of designing brand identitys. I recently got into coding, and I really enjoy experimenting and looking for exciting solutions on the internet.</p> 
+            </div>
+            <div id="about-img">
+                <img src="img/02_portrait.png" alt="a picture of me">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/di.thekid"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/di%C3%A1na-kov%C3%A1cs-b1307259/"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <address>
+            <a href="mailto:kovacsdiana93@gmail.com">Ask me anything...</a>
+        </address>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+    const navbar = document.getElementById('navbar')
+    let scrolled = false
+
+    window.onscroll = function () {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 100) {
+            navbar.classList.remove('top')
+            if (!scrolled) {
+                navbar.style.transform = 'translateY(-100px)'
+            }
+            
+            setTimeout(function () {
+                navbar.style.transform = 'translateY(0)'
+                scrolled = true
+            }, 1000)
+        }
+        else {
+            navbar.classList.add('top')
+            scrolled = false
+        }
+    }
+
+    </script>
+
+</body>
+</html>
